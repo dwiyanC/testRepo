@@ -102,4 +102,9 @@ class imageController extends Controller
         $push = ItemImage::insert($dataset);
         return redirect('details/'.$id);
     }
+
+    function gitMockUpFunction(){
+        $x= 'a mockup function to test git branching and pull request';
+        echo $x;
+    }
 }
