@@ -61,24 +61,6 @@ class detailController extends Controller
 
 
 
-        // $comment = DB::table('comments')
-        //             -> where ('inventory_id', '=', $id);
-        //print_r ($comment);
-        // $comment -> comment = $request -> comment;
-        // $comment -> save();
-
-        // $inventory_id = $id;
-        // echo "invent".$inventory_id;
-        // echo $request -> comment;
-        // $comment = Comment::find($inventory_id);
-        // echo "\n $comment";
-        // die;
-
-
-        // $comment = Comment::find($inventory_id);
-        // $comment -> comment = $request -> comment;
-        // $comment-> save();
-
     }
 
 
@@ -86,46 +68,3 @@ class detailController extends Controller
 }
 
 
-
-        // $comments = DB::table('item_comments')
-        //             -> where ('inventory2_id', '=', $id)
-        //             -> get();
-        
-        // $items = Inventory2::find($id);
-        // $details = [
-        //         'item'=>$items,
-        //         'comments'=>$comments, //in array, containing all column names and contents
-        // ];
-
-        // $details = DB::table('inventories')
-        //             -> join('item_comments', 'inventory2_id', '=', 'id')
-        //             -> select('inventories.unit_name', 'inventories.unit_type', 'inventories.unit_no',
-        //                         'item_comments.inventory2_id', 'item_comments.comment', 'item_comments.created_at')
-        //             -> where('invetory2_id', '=', $id)
-        //             -> get();
-        
-        // $commentTest = Comment2::where('comment_id', 22)->first();
-        // echo $commentTest->comment. "<br>";
-        // echo "<pre>";
-        // print_r($commentTest->inventory);
-        // die;
-
-        
-        // if(Cache::has($details)){
-        //     $details = Cache::get($details);
-        //     echo 'loaded from cache';
-        // }else{
-        //     $items = Inventory2::find($id);
-        //     $comments = $items->comments; //Relationship method comments in INventory2
-        //     $details = [
-        //         'item'=>$items,
-        //         'comments'=>$comments, //in array, containing all column names and contents
-        //          ];
-        // }
-        
-        // echo '<pre>';
-        // print_r (Cache::get($details));
-        // die;
-        
-        // print_r($invs->unit_name);
-        // die;

@@ -17,19 +17,14 @@ class imageController extends Controller
             'unit_image'=>'required|file|image|mimes:png,jpg,jpeg|max:2048'
         ];
 
-        // echo '<pre>';
-        // print_r($request->all());
-        // die;
 
         $file = $request->file('unit_image');
 
-        // $filename = 'item_'.$id.'MainImage.'.$file->getClientOriginalExtension();
         $filename = 'item_'.$id.'MainImage.'.$file->getClientOriginalExtension();
 
         $this->validate($request, $rules);
         $isMainImage = true;
 
-        // $nameCheck = explode(".",$filename);
         $record = ItemImage::where([
             ['inventory2_id', $id],
             ['main_image', $isMainImage],
@@ -39,9 +34,6 @@ class imageController extends Controller
 
 
         if($record == !NULL){     
-            //kalo udah ada di record -> update file, update name
-            // file in storage is automatically override if file is inputted with name of existing one, hence no delete function for storage
-            // if ($nameCheck[0] === $recordName[0]){
             $file->storeAs('public/itemImages', $filename); // store in storage/public/itemImages
             ItemImage::create([
                 'inventory2_id'=>$id,
@@ -82,9 +74,6 @@ class imageController extends Controller
         }
     }
 
-    // function showCarouselForm(Request $request){
-    //     return view('actions.carouselForm', ['id'=>$request->id]);
-    // }
 
     function addCarouselImage(Request $request, $id){
         $request->validate([
@@ -110,7 +99,6 @@ class imageController extends Controller
                 ];
             }
         }
-        // dd($insert);
         $push = ItemImage::insert($dataset);
         return redirect('details/'.$id);
     }
