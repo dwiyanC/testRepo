@@ -1,28 +1,27 @@
 
 ## How To Run
 
-You can reproduce this repo in following step:
+You can reproduce this repo by following these steps:
 
 - Clone or download this repo
 - Move cloned repo to your preferred directory
 - cd to that directory
-- run 'composer install' and wait for the process to finish
+- run composer install and wait for the process to finish
 - Create your database
-- Create your '.env' file by copying '.env.example'
-- Add your database name and db credential into newly created '.env' file
-- run migration using
-'''
-php artisan migrate
-'''
-
+- Create your `.env` file by copying `.env.example`
+- Add your database name and db credential into newly created `.env` file
+- run `php artisan key:generate`
+- run migration using `php artisan migrate`
 - Make sure these tables show up in your database along with default laravel migration:
-'''
+
     - users
     - inventories
     - item_comments
     - categories
     - item_images
-'''
-- run seeder by running 'php artisan db:seed' it will create 20 instances in users, inventories, and item_comments
-- Access localhost and login with generated credential (you should check it in phpmyadmin, the default password is: password)
+
+- run seeder by running `php artisan db:seed` it will create 20 instances in users, inventories, item_comments
+- run category seeder by running `php artisan db:seed --class=CategorySeeder', it will create 3 instances of Category
+- run `php artisan serve` , and let the server run
+- Access localhost and login with generated credential (you have to check it in phpmyadmin, the default password is: 123456)
 - For Admin access, change user role in user table to admin by accessing table directly
