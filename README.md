@@ -8,7 +8,7 @@ You can reproduce this repo by following these steps:
 - cd to that directory
 - run composer install and wait for the process to finish
 - Create your database
-- Create your `.env` file by copying `.env.example`
+- Copy `.env.example` file and rename it into `.env`
 - Add your database name and db credential into newly created `.env` file
 - run `php artisan key:generate`
 - run migration using `php artisan migrate`
@@ -25,3 +25,4 @@ You can reproduce this repo by following these steps:
 - run `php artisan serve` , and let the server run
 - Access localhost and login with generated credential (you have to check it in phpmyadmin, the default password is: 123456)
 - For Admin access, change user role in user table to admin by accessing table directly
+- Run `php artisan storage:link` to show item image
