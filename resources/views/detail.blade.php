@@ -65,7 +65,7 @@
                         <div class="carousel-inner">
                                 @foreach($image as $idx => $img)
                                     @if (!$img->main_image)
-                                        <div class="carousel-item {{ $idx == 0 ? 'active' : '' }}" style="width:400px height:400px">
+                                        <div class="carousel-item {{ $idx == 0 ? 'active' : '' }}" style="width:400px; height:400px">
                                             <img class="d-block w-20" src='{{ Storage::url("itemImages/{$img->image_name}") }}'  alt="">
                                         </div>
                                     @endif
@@ -89,7 +89,7 @@
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-10">
-                                <form method="POST" action="addComment/{{$item -> id}}">
+                                <form method="POST" action="/addComment/{{$item -> id}}">
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="comment">

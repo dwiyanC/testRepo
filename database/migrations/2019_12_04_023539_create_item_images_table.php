@@ -16,7 +16,7 @@ class CreateItemImagesTable extends Migration
         Schema::create('item_images', function (Blueprint $table) {
             $table->bigIncrements('image_id');
             $table->bigInteger('inventor2y_id')->unsigned();
-            $table->foreign('inventor2y_id')->references('id')->on('inventories')->onDelete('cascade');
+            $table->foreign('inventory2_id')->references('id')->on('inventories')->onDelete('cascade');
             $table->string('image_name');
             $table->boolean('main_image')->default(0);
             $table->timestamps();

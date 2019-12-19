@@ -21,7 +21,7 @@ You can reproduce this repo by following these steps:
     - item_images
 
 - run seeder by running `php artisan db:seed` it will create 20 instances in users, inventories, item_comments
-- run category seeder by running `php artisan db:seed --class=CategorySeeder', it will create 3 instances of Category
+- run category seeder by running `php artisan db:seed --class=CategorySeeder`, it will create 3 instances of Category
 - run `php artisan serve` , and let the server run
 - Access localhost and login with generated credential (you have to check it in phpmyadmin, the default password is: 123456)
 - For Admin access, change user role in user table to admin by accessing table directly
