@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemCategories extends Migration
+class CreateInventoriesBackup extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateItemCategories extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->bigIncrements('type_id');
-            $table->string('type_names');
-            $table->string('description');
+        Schema::create('inventories_backup', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('unit_type');
+            $table->string('unit_name');
+            $table->string('unit_no');
+            $table->tinyInteger('active')->default('1');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateItemCategories extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('item_categories');
+        Schema::dropIfExists('inventories_backup');
     }
 }
