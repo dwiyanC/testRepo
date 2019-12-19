@@ -32,4 +32,4 @@ You can reproduce this repo by following these steps:
 - run `php artisan serve` , and let the server run
 - Access localhost and login with generated credential (you have to check it in phpmyadmin, the default password is: 123456)
 - For Admin access, change user role in user table to admin by accessing table directly
-- Run `php artisan storage:link` to show item image
+- Run `php artisan storage:link` to show item image in details
