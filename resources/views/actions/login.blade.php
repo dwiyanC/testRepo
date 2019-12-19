@@ -1,4 +1,4 @@
-@php $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/'; @endphp
+@php //$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/'; @endphp
 
 @extends('layout.app')
 
@@ -23,7 +23,7 @@
                 <small class="text-danger">{{ $errors->first('password') }}</small>
             </div>
             <button class="btn btn-primary btn-user btn-block">Login</button>
-            <a href="{{ $base_url . 'redirect' }}" class="btn btn-info btn-block">Login With Google</a>
+            <a href="{{ url('redirect') }}" class="btn btn-info btn-block">Login With Google</a>
         </form>
     </div>
 </div>

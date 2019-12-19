@@ -1,5 +1,5 @@
 @php //$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/'; @endphp
-@php $base_url = 'http://localhost:8000/'; @endphp
+@php //$base_url = 'http://localhost:8000/'; @endphp
 
 @extends('layout.app')
 
@@ -42,10 +42,10 @@
                     <td> {{ $item-> unit_no }} </td>
                     <td> {{ $item-> created_at }} </td>
                     <td> {{ $item-> updated_at }} </td>
-                    <td><a class='btn btn-info btn-sm' href='{{ $base_url . "details/{$item -> id}" }}'>Details</a>
+                    <td><a class='btn btn-info btn-sm' href='{{ url("/details", [$item->id]) }}'>Details</a>
                     @can ('isAdmin')
-                        <a class='btn btn-warning btn-sm' href='{{ $base_url . "edit/{$item -> id}" }}'>Edit</a>
-                        <a class='btn btn-danger btn-sm' href='{{ $base_url . "delete/{$item -> id}" }}'>Delete</a>
+                        <a class='btn btn-warning btn-sm' href='{{ url("/edit", [$item->id]) }}'>Edit</a>
+                        <a class='btn btn-danger btn-sm' href='{{ url("/delete", [$item->id]) }}'>Delete</a>
                     @endcan
                     </td>
                 </tr>
