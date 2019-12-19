@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 $factory->define(Category::class, function (Faker $faker) {
     return [
-        'type_names' => $faker->text($maxNbChars = 5),
+        'type_name' => $faker->text($maxNbChars = 5),
         'description' => $faker->text($maxNbChars = 8),
     ];
 });
