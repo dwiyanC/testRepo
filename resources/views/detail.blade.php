@@ -1,4 +1,4 @@
-@php $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/'; @endphp
+@php //$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/'; @endphp
 
 @extends('layout.app')
 
@@ -16,7 +16,7 @@
                     <div class="d-flex flex-row bd-highlight mb-3">
                         <div class="col-md-4">
                         @if (!$mainImage)
-                        <img src='{{ $base_url . "img/images.png" }}' class="card-img" style="max-width:240px; margin:25px">
+                        <img src='{{ url("img/images.png") }}' class="card-img" style="max-width:240px; margin:25px">
                         @else
                         <img src = '{{ Storage::url("itemImages/{$mainImage->image_name}") }}' class="card-img" style="max-width:240px; margin:25px" onerror="this.onerror=null;this.src='/img/images.png';">  
                         @endif   

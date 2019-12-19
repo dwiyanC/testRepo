@@ -1,5 +1,5 @@
 @php //$base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/'; @endphp
-@php $base_url = 'http://localhost:8000/'; @endphp
+@php //$base_url = 'http://localhost:8000/'; @endphp
 
 <!DOCTYPE html>
 <html lang = "en">
@@ -7,12 +7,12 @@
 <head>
     <title> Laravel Inventory : @yield('title')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="{{ $base_url . 'css/app.css' }}" rel="stylesheet" type="text/css">
+    <link href="{{ url('css/app.css') }}" rel="stylesheet" type="text/css">
 </head>
 
 <body id="page-top">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{ $base_url . '' }}">Home</a>
+  <a class="navbar-brand" href="{{ url('') }}">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,10 +28,10 @@
     @endif
     </a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="{{ $base_url . 'addItems' }}">Add Item</a>
+        <a class="dropdown-item" href="{{ url('addItems') }}">Add Item</a>
         @if (Auth::check())
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{ $base_url . 'logout' }}">Logout</a>
+          <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
         @endif
     </div>
     </li>
@@ -49,9 +49,9 @@
 
 
 <!-- Bootstrap core JavaScript-->
-<script src="{{ $base_url . 'js/jquery.min.js' }}"></script>
-<script src="{{ $base_url . 'js/popper.min.js' }}"></script>
-<script src="{{ $base_url . 'js/bootstrap.bundle.min.js' }}"></script>
+<script src="{{ url('js/jquery.min.js') }}"></script>
+<script src="{{ url('js/popper.min.js') }}"></script>
+<script src="{{ url('js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 
