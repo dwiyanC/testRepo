@@ -165,4 +165,9 @@ class indexController extends Controller
         }
         return redirect('/');
     }
+
+    function mockUpForPullReq(){
+        $f = 'test for branch';
+        echo $f;
+    }
 }
