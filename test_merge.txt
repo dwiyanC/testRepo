@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 test
 merge
+=======
+text test merge
+>>>>>>> dev_branch
