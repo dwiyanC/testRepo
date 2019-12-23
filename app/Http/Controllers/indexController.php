@@ -26,7 +26,8 @@ class indexController extends Controller
     // get items from DB
     public function listItems(){
         
-        $items = Inventory2::paginate(10);
+        $items = Inventory2::all();
+        // $items = Inventory2::paginate(20);
         
         return view('index', ['items' =>$items]);
         // return view('index');

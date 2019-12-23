@@ -21,7 +21,7 @@
                 <div class="alert alert-danger">{{ session('error') }}</div>
             @endif
             <!-- <button type="button" data-toggle="modal" data-target="#modalTest" class="btn btn-primary btn-success float-right" styles="margin-top:10%">test modal</button> -->
-            <table class="table table-striped thead-dark" style="margin-top:50px">
+            <table class="table table-striped thead-dark" style="margin-top:50px" id="itemTable">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -55,7 +55,6 @@
 
             </table>
  
-            {{ $items->links() }}
             
  
         </div>
